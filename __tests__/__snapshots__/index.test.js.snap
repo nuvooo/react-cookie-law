@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CookieBanner renders correctly 1`] = `
+<CookieLaw
+  cookieHeadline="Test"
+  cookieMessage="Hello World!"
+/>
+`;
