@@ -2,14 +2,18 @@ import React from 'react';
 import { CookieWrapper, CookieHeadline, CookieBody, CookieRow, CookieButton, CookieCustomise, CookieCheckbox, CookieFormGroup } from './styles';
 import { getCookie, setCookie } from './helper';
 
-
-interface CookieProps {
-    onAcceptPreferences: () => void;
-    onAcceptStatistics: () => void;
-    onAcceptMarketing: () => void;
-    onAccept: () => void;
-    getAccept: (done : any) => void;
-    cookieDirection?: Direction;
+export interface CookieProps {
+    onAcceptPreferences?: () => void;
+    onAcceptStatistics?: () => void;
+    onAcceptMarketing?: () => void;
+    onAccept?: () => void;
+    /**
+     * Direction
+     */
+    cookieDirection: Direction;
+    /**
+     * Background Color
+     */
     backgroundColor?: string;
     cookieMessage: string;
     cookieHeadline: string;
@@ -30,7 +34,7 @@ interface CookieProps {
     setMarketingOption?:boolean;
     setStatisticsOption?:boolean;
 }
-type Direction = 'Top' | 'Bottom' | 'Center';
+export type Direction = 'Top' | 'Bottom' | 'Center';
 
 const CookieLaw: React.FC<CookieProps> = ({
     cookieDirection = "Bottom",
